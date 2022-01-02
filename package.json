@@ -1,7 +1,7 @@
 {
   "name": "classparser",
   "version": "0.1.0",
-  "description": "A easy class parser for dinamic styling",
+  "description": "An easy class parser for dynamic styling",
   "keywords": ["class", "dynamic", "parser", "style"],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
