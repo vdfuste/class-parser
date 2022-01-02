@@ -1,32 +1,37 @@
 {
-  "name": "classparser",
-  "version": "0.1.0",
-  "description": "An easy class parser for dynamic styling",
-  "keywords": ["class", "dynamic", "parser", "style"],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "lib/**/*"
-  ],
-  "scripts": {
-    "test": "jest",
-    "build": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vdfuste/classparser.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vdfuste/classparser/issues"
-  },
-  "homepage": "https://github.com/vdfuste/classparser#readme",
-  "author": "Víctor Dual <vdfuste@gmail.com>",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/jest": "27.4.0",
-    "jest": "27.4.5",
-    "ts-jest": "27.1.2",
-    "ts-node": "^10.4.0",
-    "typescript": "4.5.4"
-  }
+	"name": "classparser",
+	"version": "0.1.0",
+	"description": "An easy class parser for dynamic styling",
+	"keywords": [
+		"class",
+		"dynamic",
+		"parser",
+		"style"
+	],
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"files": [
+		"lib/**/*"
+	],
+	"scripts": {
+		"test": "jest",
+		"build": "tsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vdfuste/classparser.git"
+	},
+	"bugs": {
+		"url": "https://github.com/vdfuste/classparser/issues"
+	},
+	"homepage": "https://github.com/vdfuste/classparser#readme",
+	"author": "Víctor Dual <vdfuste@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "27.4.0",
+		"jest": "27.4.5",
+		"ts-jest": "27.1.2",
+		"ts-node": "10.4.0",
+		"typescript": "4.5.4"
+	}
 }
