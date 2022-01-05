@@ -1,5 +1,5 @@
 {
-	"name": "classparser",
+	"name": "class-parser",
 	"version": "0.1.0",
 	"description": "An easy class parser for dynamic styling",
 	"keywords": [
