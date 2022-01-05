@@ -15,7 +15,9 @@
 	],
 	"scripts": {
 		"test": "jest",
-		"build": "tsc"
+		"build": "tsc",
+		"push": "git push github master",
+		"update": "git pull github master"
 	},
 	"repository": {
 		"type": "git",
