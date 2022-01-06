@@ -1,40 +1,47 @@
 import Parse from "../src";
 
-test("Strings Parser", () => {
-	expect(Parse("Class", "", null, "parsing"))
-	.toBe("Class parsing");
+describe("Strings", () => {
+	test("with Numbers", () => {
+		expect(Parse("it", "", "works", 1, 0, -1, null))
+		.toBe("it works 1");
+	});
+	
+	test("with Object", () => {
+		expect(Parse("it", { fails: false, foo: "works", num: 1 }))
+		.toBe("it works 1");
+	});
 });
 
-test("Numbers Parser", () => {
-	expect(Parse(0, -1, null, 1))
-	.toBe("1");
+describe("Object", () => {
+	test("True Array", () => {
+		expect(Parse({ it: true, fails: false, works: [true, true, true] }))
+		.toBe("it works");
+	});
+
+	test("False Array", () => {
+		expect(Parse({ it: true, works: true, foo: [true, false, true] }))
+		.toBe("it works");
+	});
 });
 
-test("String Array Parser", () => {
-	expect(Parse(["String", "Array", "parsing", "works"]))
-	.toBe("String Array parsing works");
+describe("Array", () => {
+	test("Anonnymous", () => {
+		expect(Parse(["it", "works"]))
+		.toBe("it works");
+	});
+	
+	test("Multiple Anonnymous", () => {
+		expect(Parse(["it"], ["works"]))
+		.toBe("it works");
+	});
+	
+	test("with Objects", () => {
+		expect(Parse([{ it: true, fails: false, works: true }]))
+		.toBe("it works");
+	});
 });
 
-test("Number Array Parser", () => {
-	expect(Parse([1, 0, -1, null]))
-	.toBe("1");
+test("Crushing!", () => {
+	expect(Parse([{ it: true, fails: [true, false]}, ["works", { "great": [1, 2, 3], yay: ":D" }]]))
+	.toBe("it works great :D");
 });
-
-test("Object Parser", () => {
-	expect(Parse("Object", { fail: false, parsing: true, foo: "works" }))
-	.toBe("Object parsing works");
-});
-
-test("Complex Parser", () => {
-	const arr = [1, 1, "abc", true];
-	//const obj = { works: [true, true] };
-	const obj = { works: true, num: 1 };
-
-	expect(Parse("Complex", arr, obj))
-	.toBe("Complex 1 1 abc works 1");
-});
-
-/*test("Object Parser", () => {
-	expect(Parse("Parsing", { fails: false, foo: null, works: true, num: 42 }))
-	.toBe("Parsing works 42");
-});*/
