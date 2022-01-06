@@ -26,12 +26,12 @@ test("Object Parser", () => {
 });
 
 test("Complex Parser", () => {
-	const arr = [1,1, "abc", true];
+	const arr = [1, 1, "abc", true];
 	//const obj = { works: [true, true] };
 	const obj = { works: true, num: 1 };
 
 	expect(Parse("Complex", arr, obj))
-	.toBe("Complex parsing works 1");
+	.toBe("Complex 1 1 abc works 1");
 });
 
 /*test("Object Parser", () => {

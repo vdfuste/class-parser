@@ -4,8 +4,9 @@
 		"module": "CommonJS",
 		"declaration": true,
 		"outDir": "./lib",
-		"strict": true
+		"strict": true,
+		"removeComments": true
 	},
-	"include": ["src"],
+	"include": ["src/index.ts"],
 	"exclude": ["node_modules"]
 }

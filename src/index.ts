@@ -1,13 +1,4 @@
-enum CaseType {
-	camelCase = "camelCase",
-	"kebab-case" = "kebak-case",
-	lowercase = "lowercase",
-	PascalCase = "PascalCase",
-	snake_case = "snake_case",
-	NONE = "NONE",
-};
-
-let parserCase = CaseType.NONE;
+//import { SetCaseType, CaseType } from "./caseTypes";
 
 function Parse(...args:any[]) {
 	let newClass:string = "";
@@ -37,9 +28,5 @@ function Parse(...args:any[]) {
 	return newClass.trim();
 };
 
-function SetCaseType(caseType:CaseType) {
-	parserCase = caseType;
-}
-
 export default Parse;
-export { SetCaseType, CaseType };
+//export { SetCaseType, CaseType };
