@@ -14,8 +14,9 @@
 		"lib/**/*"
 	],
 	"scripts": {
-		"test": "jest",
 		"build": "tsc",
+		"clear": "rm -R lib/*",
+		"test": "jest",
 		"push": "git push github master",
 		"update": "git pull github master"
 	},
