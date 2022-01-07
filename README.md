@@ -68,9 +68,11 @@ var myClass = Parse("button", { active });
 ```
 
 #### Arrays
-There's two kinds of `arrays`, the **anonymous**, which is created out of a variable or an object _(as we saw before)_ and the **named**, the last ones has a different behaviour.
+There's two kinds of `arrays`, the **anonymous**, which is created out of a variable or an object _(as we saw before)_ 
+and the **named**, the last ones has a different behaviour.
 
-Even if the `array` has multiples values, it just create a single string when it's parsed, but, the key is if one or more of those values are `falsy` the string will be empty.
+Even if the `array` has multiples values, it just create a single string when it's parsed, but, the key is if one or more 
+of those values are `falsy` the string will be empty.
 
 Also, it **must be wrapped** in an `object`.
 
