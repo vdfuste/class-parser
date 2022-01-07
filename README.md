@@ -2,7 +2,7 @@
 An easy way to styling inline dynamically.
 
 ## Installation
-Install `class-parser` with npm.
+Installing `class-parser` with npm.
 ```bash
 npm install class-parser
 ```
@@ -25,8 +25,8 @@ Any of the basic variables are allowed to be used such as `booleans`, `strings`,
 Let's see an example:
 ```js
 var myStyle = {
-	visible: true,
-	active: false
+    visible: true,
+    active: false
 };
 
 var myClass = Parse("button", myStyle);
@@ -104,11 +104,11 @@ This is a simple example of how to use the `class-parser` in a react component:
 import Parse from "class-parser";
 
 const Button = ({ active }) => {
-	return (
-		<button className={ Parse("button", { active }) }>
-			Click me!
-		</button>
-	);
+    return (
+        <button className={ Parse("button", { active }) }>
+            Click me!
+        </button>
+    );
 };
 ```
 
