@@ -1,7 +1,7 @@
 {
 	"name": "class-parser",
 	"version": "0.1.0",
-	"description": "An easy class parser for dynamic styling",
+	"description": "An easy way to styling inline dynamically",
 	"keywords": [
 		"class",
 		"dynamic",
@@ -17,8 +17,8 @@
 		"build": "tsc",
 		"clear": "rm -R lib/*",
 		"test": "jest",
-		"push": "git push github master",
-		"update": "git pull github master"
+		"push": "git push origin master",
+		"update": "git pull origin master"
 	},
 	"repository": {
 		"type": "git",
