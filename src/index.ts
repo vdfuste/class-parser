@@ -1,5 +1,3 @@
-//import { SetCaseType, CaseType } from "./caseTypes";
-
 function parse(...args:any[])
 {
 	let newClass:string = "";
@@ -22,7 +20,7 @@ function parse(...args:any[])
 					newClass += parse(arg[n]) + " ";
 				}
 			}
-			else //if(type === "object")
+			else
 			{
 				const keys = Object.keys(arg);
 
@@ -63,5 +61,3 @@ function parse(...args:any[])
 }
 
 export = parse;
-//export default parse;
-//export { SetCaseType, CaseType };
