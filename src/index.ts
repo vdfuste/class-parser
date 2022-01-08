@@ -1,6 +1,6 @@
 //import { SetCaseType, CaseType } from "./caseTypes";
 
-function Parse(...args:any[])
+function parse(...args:any[])
 {
 	let newClass:string = "";
 
@@ -19,7 +19,7 @@ function Parse(...args:any[])
 			{
 				for(let n = 0; n < arg.length; n++)
 				{
-					newClass += Parse(arg[n]) + " ";
+					newClass += parse(arg[n]) + " ";
 				}
 			}
 			else //if(type === "object")
@@ -62,5 +62,6 @@ function Parse(...args:any[])
 	return newClass.trim();
 }
 
-export default Parse;
+export = parse;
+//export default parse;
 //export { SetCaseType, CaseType };
