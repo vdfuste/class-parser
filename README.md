@@ -9,16 +9,16 @@ npm install class-parser
 
 ## Usage
 ### Getting the module
-First of all, you need to import the `Parse` function from the module.
+First of all, you need to import the `parse` function from the module.
 ```js
 // Using require
-var Parse = require("class-parser");
+var parse = require("class-parser");
 
 // or using import
-import Parse from "class-parser";
+import parse from "class-parser";
 ```
 ### Parsing variables
-Use the `Parse` function to convert variables into a single string.
+Use the `parse` function to convert variables into a single string.
 
 Any of the basic variables are allowed to be used such as `booleans`, `strings`, `numbers`, `objects` and `arrays` so you can combine them as you need it.
 
@@ -29,7 +29,7 @@ var myStyle = {
     active: false
 };
 
-var myClass = Parse("button", myStyle);
+var myClass = parse("button", myStyle);
 // expected string: "button visible"
 ```
 > There's no limit in the arguments the function can receive
@@ -39,13 +39,13 @@ Both `strings` and `numbers` don't need to be wrapped neither in an `object` nor
 
 Les't see some examples:
 ```js
-Parse("This", "will", "work");
+parse("This", "will", "work");
 // expected string: "This will work"
 
-Parse(["This", "will"], { text1: "work", text2: "too" });
+parse(["This", "will"], { text1: "work", text2: "too" });
 // expected string: "This will work too"
 
-Parse({ one: 1, two: 2, zero: 0 }, [-1, 3, 4]);
+parse({ one: 1, two: 2, zero: 0 }, [-1, 3, 4]);
 // expected string: "1 2 3 4"
 ```
 > **Notice:** The `key` names on the object are ignored and only uses de `value` when parsing if the value is a `string` or a `number`, otherwise the `key` will be used.
@@ -57,14 +57,14 @@ So, this won't work:
 ```js
 // wrong way
 var active = true;
-var myClass = Parse("button", active);
+var myClass = parse("button", active);
 ```
 
 The **correct** way is:
 ```js
 // correct way
 var active = true;
-var myClass = Parse("button", { active });
+var myClass = parse("button", { active });
 ```
 
 #### Arrays
@@ -82,7 +82,7 @@ var will = [true, true, true];
 var fail = [true, false];
 var work = [1, 2, 3];
 
-var myClass = Parse("This", { will, fail, work });
+var myClass = parse("This", { will, fail, work });
 // expected string: "This will work"
 ```
 > **Falsy**: A value considered "false", for example: `0`, `null`, `""` or `NaN`.
@@ -96,18 +96,18 @@ var name = "John";
 var lastName = "Doe";
 var age = 24;
 
-var btnClass = Parse("button", { active: [name, lastName, age] });
+var btnClass = parse("button", { active: [name, lastName, age] });
 // expected string: "button active"
 ```
 
 ### A React.js example
 This is a simple example of how to use the `class-parser` in a react component:
 ```jsx
-import Parse from "class-parser";
+import parse from "class-parser";
 
 const Button = ({ active }) => {
     return (
-        <button className={ Parse("button", { active }) }>
+        <button className={ parse("button", { active }) }>
             Click me!
         </button>
     );
